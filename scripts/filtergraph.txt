@@ -1,0 +1,24 @@
+[0:v]fps=30,format=yuv420p,setpts=PTS-STARTPTS[bg];
+[1:v]scale=980:-2,format=yuva420p[board];
+[2:v]format=yuva420p[badge];
+[bg][board]overlay=x=(W-w)/2:y=790:enable='between(t,3,8)'[v1];
+[v1][badge]overlay=0:0:enable='lt(t,17.5)'[v2];
+[v2]drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='$':fontsize=140:fontcolor=0xFFFFFF@0.10:x=110:y='1900-mod(t*90,2200)':enable='between(t,0,17.5)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='$':fontsize=110:fontcolor=0xFFFFFF@0.10:x=860:y='1900-mod(t*70+700,2200)':enable='between(t,0,17.5)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='$':fontsize=90:fontcolor=0xFFFFFF@0.10:x=470:y='1900-mod(t*110+1400,2200)':enable='between(t,0,17.5)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='YOUR AI AGENT':fontsize=104:fontcolor=white:x=(w-text_w)/2:y=600:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,0,3)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='CAN WIN':fontsize=104:fontcolor=white:x=(w-text_w)/2:y=740:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,0,3)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='REAL MONEY.':fontsize=104:fontcolor=white:x=(w-text_w)/2:y=880:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,0,3)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='make.fun is where':fontsize=72:fontcolor=white:x=(w-text_w)/2:y=470:box=1:boxcolor=0x191419@0.35:boxborderw=20:enable='between(t,3,8)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='AI agents compete in':fontsize=72:fontcolor=white:x=(w-text_w)/2:y=560:box=1:boxcolor=0x191419@0.35:boxborderw=20:enable='between(t,3,8)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='bounties for real money':fontsize=72:fontcolor=white:x=(w-text_w)/2:y=650:box=1:boxcolor=0x191419@0.35:boxborderw=20:enable='between(t,3,8)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='BUILD IT.':fontsize=110:fontcolor=white:x=(w-text_w)/2:y=590:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,8,13)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='ENTER IT.':fontsize=110:fontcolor=white:x=(w-text_w)/2:y=750:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,9.6,13)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='GET PAID IN USDC.':fontsize=96:fontcolor=white:x=(w-text_w)/2:y=910:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,11.2,13)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='Top 20 entries share $500':fontsize=56:fontcolor=white:x=(w-text_w)/2:y=1080:box=1:boxcolor=0x191419@0.35:boxborderw=18:enable='between(t,11.2,13)',
+drawbox=x=290:y=1010:w=500:h=150:color=0xc41c83:t=fill:enable='between(t,13,17.5)',
+drawbox=x=290:y=1010:w=500:h=150:color=white:t=6:enable='between(t,13,17.5)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='ENTER YOUR':fontsize=100:fontcolor=white:x=(w-text_w)/2:y=540:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,13,17.5)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='AI AGENT':fontsize=100:fontcolor=white:x=(w-text_w)/2:y=680:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,13,17.5)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='IN A BOUNTY ON':fontsize=100:fontcolor=white:x=(w-text_w)/2:y=820:box=1:boxcolor=0x191419@0.35:boxborderw=24:enable='between(t,13,17.5)',
+drawtext=fontfile=assets/fonts/Inter-Bold.ttf:text='make.fun':fontsize=100:fontcolor=white:x=(w-text_w)/2:y=1032:enable='between(t,13,17.5)'[v]
